@@ -1,0 +1,691 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": 123456,
+      "roleState": true,
+      "default": true,
+      "region": "",
+      "roleId": 1
+    },
+    {
+      "username": "铁锤",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "建筑学院",
+      "roleId": 2,
+      "id": 2
+    },
+    {
+      "username": "钢蛋",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "计算学部",
+      "roleId": 2,
+      "id": 3
+    },
+    {
+      "username": "诸葛山珍",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "数学学院",
+      "roleId": 2,
+      "id": 4
+    },
+    {
+      "username": "西门吹灯",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "计算学部",
+      "roleId": 3,
+      "id": 5
+    },
+    {
+      "username": "轩辕翠花",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "环境学院",
+      "roleId": 3,
+      "id": 6
+    },
+    {
+      "username": "司马海味",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "建筑学院",
+      "roleId": 3,
+      "id": 7
+    },
+    {
+      "username": "周宏理",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "建筑学院",
+      "roleId": 3,
+      "id": 8
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "roleName": "校领导",
+      "roleType": 1,
+      "rights": [
+        "/user-manage/add",
+        "/user-manage/delete",
+        "/user-manage/update",
+        "/user-manage/list",
+        "/right-manage",
+        "/right-manage/role/list",
+        "/right-manage/right/list",
+        "/right-manage/role/update",
+        "/right-manage/role/delete",
+        "/right-manage/right/update",
+        "/right-manage/right/delete",
+        "/news-manage",
+        "/news-manage/list",
+        "/news-manage/add",
+        "/news-manage/update/:id",
+        "/news-manage/preview/:id",
+        "/news-manage/draft",
+        "/news-manage/category",
+        "/audit-manage",
+        "/audit-manage/audit",
+        "/audit-manage/list",
+        "/publish-manage",
+        "/publish-manage/unpublished",
+        "/publish-manage/published",
+        "/publish-manage/sunset",
+        "/user-manage",
+        "/home"
+      ]
+    },
+    {
+      "id": 2,
+      "roleName": "院长",
+      "roleType": 2,
+      "rights": [
+        "/home",
+        "/user-manage",
+        "/user-manage/add",
+        "/user-manage/delete",
+        "/user-manage/update",
+        "/user-manage/list",
+        "/news-manage",
+        "/news-manage/list",
+        "/news-manage/add",
+        "/news-manage/update/:id",
+        "/news-manage/preview/:id",
+        "/news-manage/draft",
+        "/news-manage/category",
+        "/audit-manage",
+        "/audit-manage/audit",
+        "/audit-manage/list",
+        "/publish-manage",
+        "/publish-manage/unpublished",
+        "/publish-manage/published",
+        "/publish-manage/sunset"
+      ]
+    },
+    {
+      "id": 3,
+      "roleName": "教职工",
+      "roleType": 3,
+      "rights": [
+        "/home",
+        "/news-manage",
+        "/news-manage/list",
+        "/news-manage/add",
+        "/news-manage/update/:id",
+        "/news-manage/preview/:id",
+        "/news-manage/draft",
+        "/audit-manage",
+        "/audit-manage/list",
+        "/publish-manage",
+        "/publish-manage/unpublished",
+        "/publish-manage/published",
+        "/publish-manage/sunset"
+      ]
+    }
+  ],
+  "children": [
+    {
+      "id": 3,
+      "title": "添加用户",
+      "rightId": 2,
+      "key": "/user-manage/add",
+      "grade": 2
+    },
+    {
+      "id": 4,
+      "title": "删除用户",
+      "rightId": 2,
+      "key": "/user-manage/delete",
+      "grade": 2
+    },
+    {
+      "id": 5,
+      "title": "修改用户",
+      "rightId": 2,
+      "key": "/user-manage/update",
+      "grade": 2
+    },
+    {
+      "id": 6,
+      "title": "用户列表",
+      "rightId": 2,
+      "key": "/user-manage/list",
+      "pagepermission": 1,
+      "grade": 2
+    },
+    {
+      "id": 8,
+      "title": "角色列表",
+      "rightId": 7,
+      "key": "/right-manage/role/list",
+      "pagepermission": 1,
+      "grade": 2
+    },
+    {
+      "id": 9,
+      "title": "权限列表",
+      "rightId": 7,
+      "key": "/right-manage/right/list",
+      "pagepermission": 1,
+      "grade": 2
+    },
+    {
+      "id": 10,
+      "title": "修改角色",
+      "rightId": 7,
+      "key": "/right-manage/role/update",
+      "grade": 2
+    },
+    {
+      "id": 11,
+      "title": "删除角色",
+      "rightId": 7,
+      "key": "/right-manage/role/delete",
+      "grade": 2
+    },
+    {
+      "id": 12,
+      "title": "修改权限",
+      "rightId": 7,
+      "key": "/right-manage/right/update",
+      "grade": 2
+    },
+    {
+      "id": 13,
+      "title": "删除权限",
+      "rightId": 7,
+      "key": "/right-manage/right/delete",
+      "grade": 2
+    },
+    {
+      "id": 15,
+      "title": "新闻列表",
+      "rightId": 14,
+      "key": "/news-manage/list",
+      "grade": 2
+    },
+    {
+      "id": 16,
+      "title": "撰写新闻",
+      "rightId": 14,
+      "key": "/news-manage/add",
+      "grade": 2,
+      "pagepermission": 1
+    },
+    {
+      "id": 17,
+      "title": "新闻更新",
+      "rightId": 14,
+      "key": "/news-manage/update/:id",
+      "grade": 2,
+      "routepermission": 1
+    },
+    {
+      "id": 18,
+      "title": "新闻预览",
+      "rightId": 14,
+      "key": "/news-manage/preview/:id",
+      "grade": 2,
+      "routepermission": 1
+    },
+    {
+      "id": 19,
+      "title": "草稿箱",
+      "rightId": 14,
+      "key": "/news-manage/draft",
+      "pagepermission": 1,
+      "grade": 2
+    },
+    {
+      "id": 20,
+      "title": "新闻分类",
+      "rightId": 14,
+      "key": "/news-manage/category",
+      "pagepermission": 1,
+      "grade": 2
+    },
+    {
+      "id": 22,
+      "title": "审核新闻",
+      "rightId": 21,
+      "key": "/audit-manage/audit",
+      "pagepermission": 1,
+      "grade": 2
+    },
+    {
+      "id": 23,
+      "title": "审核列表",
+      "rightId": 21,
+      "key": "/audit-manage/list",
+      "pagepermission": 1,
+      "grade": 2
+    },
+    {
+      "id": 25,
+      "title": "待发布",
+      "rightId": 24,
+      "key": "/publish-manage/unpublished",
+      "pagepermission": 1,
+      "grade": 2
+    },
+    {
+      "id": 26,
+      "title": "已发布",
+      "rightId": 24,
+      "key": "/publish-manage/published",
+      "pagepermission": 1,
+      "grade": 2
+    },
+    {
+      "id": 27,
+      "title": "已下线",
+      "rightId": 24,
+      "key": "/publish-manage/sunset",
+      "pagepermission": 1,
+      "grade": 2
+    }
+  ],
+  "rights": [
+    {
+      "id": 1,
+      "title": "首页",
+      "key": "/home",
+      "pagepermission": 1,
+      "grade": 1
+    },
+    {
+      "id": 2,
+      "title": "用户管理",
+      "key": "/user-manage",
+      "pagepermission": 1,
+      "grade": 1
+    },
+    {
+      "id": 7,
+      "title": "权限管理",
+      "key": "/right-manage",
+      "pagepermission": 1,
+      "grade": 1
+    },
+    {
+      "id": 14,
+      "title": "新闻管理",
+      "key": "/news-manage",
+      "pagepermission": 1,
+      "grade": 1
+    },
+    {
+      "id": 21,
+      "title": "审核管理",
+      "key": "/audit-manage",
+      "pagepermission": 1,
+      "grade": 1
+    },
+    {
+      "id": 24,
+      "title": "发布管理",
+      "key": "/publish-manage",
+      "pagepermission": 1,
+      "grade": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "学生活动",
+      "value": "学生活动"
+    },
+    {
+      "id": 2,
+      "title": "党团生活",
+      "value": "党团生活"
+    },
+    {
+      "id": 3,
+      "title": "科教动态",
+      "value": "科教动态"
+    },
+    {
+      "id": 4,
+      "title": "教学信息",
+      "value": "教学信息"
+    },
+    {
+      "id": 5,
+      "title": "创新创业",
+      "value": "创新创业"
+    },
+    {
+      "id": 6,
+      "title": "其它信息",
+      "value": "其它信息"
+    }
+  ],
+  "regions": [
+    {
+      "id": 1,
+      "title": "建筑学院",
+      "value": "建筑学院"
+    },
+    {
+      "id": 2,
+      "title": "物理学院",
+      "value": "物理学院"
+    },
+    {
+      "id": 3,
+      "title": "数学学院",
+      "value": "数学学院"
+    },
+    {
+      "id": 4,
+      "title": "航天学院",
+      "value": "航天学院"
+    },
+    {
+      "id": 5,
+      "title": "基础学部",
+      "value": "基础学部"
+    },
+    {
+      "id": 6,
+      "title": "环境学院",
+      "value": "环境学院"
+    },
+    {
+      "id": 7,
+      "title": "计算学部",
+      "value": "计算学部"
+    }
+  ],
+  "news": [
+    {
+      "title": "学校办公室关于2023年夏季学期和暑假时间安排及有关要求的通知",
+      "categoryId": 6,
+      "content": "<p style=\"margin-top: 16px; margin-bottom: 16px; text-align:justify\"><span style=\"word-break:break-all\">各学院、学部，各部（处）、直属单位：</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\"> 根据学校统一安排，现将2023年夏季学期和暑假时间安排及有关要求通知如下。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\"> </span>1.<span style=\"word-break:break-all\">夏季学期和暑假时间为6月26日（星期一）至8月27日（星期日），共9周。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\"> 2.学生离校时间由各学院、学部根据教学计划和学生暑期社会实践工作等合理安排；学生到校注册时间为8月26日（星期六）、8月27日（星期日），正式上课时间为8月28日（星期一）。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\"> 3. 各职能部门、师生服务中心和各学院、学部行政部门不放假，在保证工作正常运行前提下实行轮休，安排部分工作人员在岗，轮休安排可根据本单位实际情况制定，工作时间为社会工作日上午8: 00-11: 30，下午13: 30-17: 00；从事一线教学和科研的教师，放假时间由各单位自行安排。8月26日（星期六）、8月27日（星期日）全体教职工正式上班，8月28日（星期一）秋季学期开学。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\"> 4.6月26日（星期一）至7月14日（星期五），学校领导、各单位主要负责人、副处级以上领导人员正常上班。7月15日（星期六）至8月25日（星期五），各单位需安排领导人员在哈带班（社会工作日），并保持手机畅通。带班领导人员要清楚本单位工作状态，统筹协调本单位重要事项处理。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\"> 5.校内按企业方式运转的单位根据上级要求和本单位实际情况安排假期，学校不做统一规定。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\"> 6.各单位应明确一部座机电话为本单位联系电话，并保证工作时间电话能够随时接通，明确接听电话人员工作要求，确保工作衔接有序。各单位内设机构相关业务工作负责人需协助本单位在岗工作人员及时处理工作事务。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\"> 7.全校各单位要妥善安排好在岗人员，切实加强安全保卫工作，遇到突发事件及时报告并妥善处置。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\"> 请各单位将夏季学期和暑假期间在岗工作人员和带班领导人员排班表（见附件）于6月21日（星期三）17: 00前发送至邮箱zhiban@hit.edu.cn。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"> </p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\"> 附件：夏季学期和暑假期间在岗工作人员和带班领导人员排班表</span></p>\n<p align=\"right\" style=\"margin-top:16px; margin-right:21px; margin-bottom:16px; text-align:right\"><span style=\"word-break:break-all\">学校办公室</span></p>\n<p>                                                                                                             2023年6月20日</p>",
+      "region": "学校办公室",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615777743864,
+      "star": 11,
+      "view": 2048,
+      "id": 1,
+      "publishTime": 1615778496314,
+      "views": 2032
+    },
+    {
+      "title": "学校办公室关于2023年端午节放假安排的通知",
+      "categoryId": 6,
+      "content": "<p style=\"text-align:justify\">各学院、学部，各部（处）、直属单位：</p>\n<p style=\"text-indent:32.0pt; text-align:justify\">根据《国务院办公厅关于2023年部分节假日安排的通知》（国办发明电〔2022〕16号）的文件精神，现将学校2023年端午节放假安排通知如下。</p>\n<p style=\"text-indent:32.0pt; text-align:justify\">6月22日（星期四）至6月24日（星期六）放假调休，共3天，学生停课。6月25日（星期日）教职工正常上班，教学正常进行，具体安排见教学管理部门通知。</p>\n<p style=\"text-indent:32.0pt; text-align:justify\">全校各单位要安排好节假日值班，切实加强安全保卫工作，遇到突发事件及时报告并妥善处置。</p>\n<p style=\"text-indent:32.0pt; text-align:justify\"> </p>\n<p style=\"text-indent:32.0pt; text-align:justify\"> </p>\n<p align=\"center\" style=\"text-align:center; text-indent:240.95pt\">学校办公室</p>\n<p>                                                                                     2023年6月12日</p>",
+      "region": "学校办公室",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778694831,
+      "star": 511,
+      "view": 835,
+      "id": 2,
+      "publishTime": 1615778911028,
+      "views": 834
+    },
+    {
+      "title": "学校办公室关于2023年劳动节放假安排的通知",
+      "categoryId": 6,
+      "content": "<p style=\"text-align:justify\">各学院、学部，各部（处）、直属单位：</p>\n<p style=\"text-indent:32.0pt; text-align:justify\">根据《国务院办公厅关于2023年部分节假日安排的通知》（国办发明电〔2022〕16号）的文件精神，现将学校2023年劳动节放假安排通知如下。</p>\n<p style=\"text-indent:32.0pt; text-align:justify\">4月29日（星期六）至5月3日（星期三）放假调休，共5天，学生停课。4月23日（星期日）、5月6日（星期六）教职工正常上班，教学正常进行，具体安排见教学管理部门通知。</p>\n<p style=\"text-indent:32.0pt; text-align:justify\">全校各单位要安排好节假日值班，切实加强安全保卫工作，遇到突发事件及时报告并妥善处置。</p>\n<p style=\"text-indent:32.0pt; text-align:justify\"> </p>\n<p align=\"center\" style=\"text-align:center; text-indent:240.95pt\">学校办公室</p>\n<p>                                                                                      2023年4月19日</p>",
+      "region": "学校办公室",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778715619,
+      "star": 600,
+      "view": 984,
+      "id": 3,
+      "publishTime": 1615778911762
+    },
+    {
+      "title": "学校办公室关于2023年寒假时间安排及有关要求的通知",
+      "categoryId": 6,
+      "content": "<p style=\"text-align:justify\"><span style=\"word-break:break-all\">各学院、学部，各部、处、直属单位：</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">根据学校统一安排，现将2023年寒假时间安排及有关要求通知如下。</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">1.寒假时间为2022年12月26日（星期一）至2023年2月19日（星期日），共8周。</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">2.在校生2月18日（星期六）、2月19日（星期日）到校注册；2月20日（星期一）正式上课；参加2月13日（星期一）至2月19日（星期日）课程考试的学生，根据教学部门发布的考试安排提前返校，主、监考教师做好相关准备。</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">3.各职能部门、学院、学部行政部门教职工在保证工作正常运行的前提下，合理安排轮休，从事一线教学和科研的教师，放假时间由各单位自行安排。2月18日（星期六）、2月19日（星期日）全体教职工正式上班，2月20日（星期一）春季学期开学。</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">4.寒假期间各职能部门、学院、学部安排部分工作人员在岗工作，保证各项业务能够正常办理；师生服务中心正常运行；工作时间为社会工作日上午8: 00-11: 30，下午13: 30-17: 00。</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">5.寒假期间社会工作日各单位需安排领导人员在哈24小时带班，安排工作人员工作时间在岗值班。值班工作可以由在岗工作人员承担。</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">6.各单位应明确一部座机电话为本单位联系电话，并保证工作时间电话能够随时接通，明确接听电话人员工作要求，确保工作衔接有序。值班人员和带班领导须保证手机24小时处于开机状态，确保通讯畅通。</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">7.带班领导人员要清楚本单位工作状态，统筹协调本单位重要事项处理。</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">8.各单位值班人员要认真履行各项值班工作职责，切实做好值班联络、文电收转、重大突发事件及紧急事项的请示报告等工作。值班时如遇紧急情况，要在事件发生15分钟内电话报告本单位主要领导和学校办公室总值班室，30分钟内书面报告报学校办公室。</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">9.校内按企业方式运转的单位根据学校要求和本单位上级主管部门要求做好非工作日值班安排。</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">请各单位将寒假期间值班人员和带班领导人员排班表（见附件）于12月23日（星期五）11: 30前发送至邮箱</span>zhiban@hit.edu.cn。</p>\n<p style=\"text-indent:24.0pt; text-align:justify\"> </p>\n<p style=\"text-indent:24.0pt; text-align:justify\">                                                                                                  <span style=\"word-break:break-all\">学校办公室</span></p>\n<p style=\"text-indent:24.0pt; text-align:justify\">                                                                                          2022年12月21日</p>",
+      "region": "学校办公室",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778777924,
+      "star": 100,
+      "view": 201,
+      "id": 5,
+      "publishTime": 1615778914498
+    },
+    {
+      "title": "学校办公室关于2022年国庆节安排的通知",
+      "categoryId": 6,
+      "content": "<p style=\"text-align:justify\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span style=\"background:white\">各学院、学部，各部（处）、直属单位：</span></span></span></p>\n<p style=\"text-indent:32.0pt\"><span style=\"background:white\"><span style=\"background:white\">根据《国务院办公厅关于</span><span lang=\"EN-US\" style=\"background:white\" xml:lang=\"EN-US\">2022</span><span style=\"background:white\">年部分节假日安排的通知》（国办发明电〔</span><span lang=\"EN-US\" style=\"background:white\" xml:lang=\"EN-US\">2021</span><span style=\"background:white\">〕</span><span lang=\"EN-US\" style=\"background:white\" xml:lang=\"EN-US\">11</span><span style=\"background:white\">号）文件精神和省教育厅有关会议精神，现将学校</span><span lang=\"EN-US\" style=\"background:white\" xml:lang=\"EN-US\">2022</span><span style=\"background:white\">年国庆节期间有关安排通知如下。</span></span></p>\n<p style=\"text-align:justify; text-indent:32.0pt\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">2022</span><span style=\"background:#fefefe\">年</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">10</span><span style=\"background:#fefefe\">月</span><span lang=\"EN-US\" style\"background:#fefefe\" xml:lang=\"EN-US\">1</span><span style=\"background:#fefefe\">日（星期六）、</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">10</span><span style=\"background:#fefefe\">月</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">2</span><span style=\"background:#fefefe\">日（星期日）放假，学生停课；</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">10</span><span style=\"background:#fefefe\">月</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">3</span><span style=\"background:#fefefe\">日（星期一）</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">-10</span><span style=\"background:#fefefe\">月</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">7</span><span style=\"background:#fefefe\">日（星期五）教职工正常上班，教学正常进行，相应假期调休至寒假；</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">10</span><span style=\"background:#fefefe\">月</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">8</span><span style=\"background:#fefefe\">日（星期六）、</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">10</span><span style=\"background:#fefefe\">月</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">9</span><span style=\"background:#fefefe\">日（星期日）正常休息，有教学安排的师生照常上课。</span></span></span></p>\n<p style=\"text-align:justify; text-indent:32.0pt\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span style=\"background:#fefefe\">放假期间，学校会开展丰富多彩的活动，欢迎师生积极参加。学校会充分考虑本科生、研究生的学业特点，将因疫情调休的中秋节、国庆节假期在寒假中安排。</span></span></span></p>\n<p style=\"text-align:justify; text-indent:32.0pt\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span style=\"background:#fefefe\">当前我市发生本土疫情，全校各单位要安排好国庆节期间值班，切实加强疫情防控、安全保卫及保密工作，遇到重大突发事件发生，要及时报告并妥善处置。</span></span></span></p>\n<p style=\"text-align:justify; text-indent:32.0pt\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span style=\"background:#fefefe\">广大师生员工要遵守属地管控要求，非必要不离哈。要保持良好卫生习惯，规范佩戴口罩。如出现发热、咳嗽等症状，要及时到定点医疗机构发热门诊就诊。</span></span></span></p>\n<p style=\"text-align:justify; text-indent:32.0pt\"> </p>\n<p style=\"text-align:justify; text-indent:296.0pt\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span style=\"background:#fefefe\">学校办公室</span></span></span></p>\n<p style=\"text-align:justify; text-indent:272.0pt\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">   2022</span><span style=\"background:#fefefe\">年</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">9</span><span style=\"background:#fefefe\">月</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">23</span><span style=\"background:#fefefe\">日</span></span></span></p>",
+      "region": "学校办公室",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778808893,
+      "star": 300,
+      "view": 454,
+      "id": 6,
+      "publishTime": 1615778916224
+    },
+    {
+      "title": "学校办公室关于2022年中秋节安排的通知",
+      "categoryId": 6,
+      "content": "<p style=\"text-align:justify\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span style=\"background:white\">各学院、学部，各部（处）、直属单位：</span></span></span></p>\n<p style=\"text-indent:27.0pt\"><span style=\"background:white\"><span style=\"background:white\">根据《国务院办公厅关于</span><span lang=\"EN-US\" style=\"background:white\" xml:lang=\"EN-US\">2022</span><span style=\"background:white\">年部分节假日安排的通知》（国办发明电〔</span><span lang=\"EN-US\" style=\"background:white\" xml:lang=\"EN-US\">2021</span><span style=\"background:white\">〕</span><span lang=\"EN-US\" style=\"background:white\" xml:lang=\"EN-US\">11</span><span style=\"background:white\">号）和省教育厅《进一步严实抓好秋季开学时段校园疫情防控工作指导意见》的有关要求，鉴于哈市当前疫情形势仍严峻复杂，结合我校实际情况，现将学校</span><span lang=\"EN-US\" style=\"background:white\" xml:lang=\"EN-US\">2022</span><span style=\"background:white\">年中秋节期间有关安排通知如下。</span></span></p>\n<p style=\"text-align:justify; text-indent:27.0pt\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">2022</span><span style=\"background:#fefefe\">年</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">9</span><span style=\"background:#fefefe\">月</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">10</span><span style=\"background:#fefefe\">日（星期六）、</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">9</span><span style=\"background:#fefefe\">月</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">11</span><span style=\"background:#fefefe\">日（星期日）正常休息，有教学安排的师生照常上课。</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">9</span><span style=\"background:#fefefe\">月</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">12</span><span style=\"background:#fefefe\">日（星期一）不放假，教职工正常上班，教学正常进行，调休至寒假。</span></span></span></p>\n<p style=\"text-align:justify; text-indent:27.0pt\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span style=\"background:#fefefe\">当前我市发生本土疫情，请广大师生员工当好自身健康第一责任人，严格遵守属地和学校的疫情防控规定，保持良好卫生习惯，勤洗手、戴口罩，不聚集不聚会。如出现发热、咳嗽等症状，要及时到定点医疗机构发热门诊就诊。</span></span></span></p>\n<p style=\"text-align:justify\"> </p>\n<p style=\"text-align:justify; text-indent:317.25pt\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span style=\"background:#fefefe\">学校办公室</span></span></span></p>\n<p style=\"text-align:justify; text-indent:303.75pt\"><span style=\"background:white\"><span style=\"text-justify:inter-ideograph\"><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">2022</span><span style=\"background:#fefefe\">年</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">9</span><span style=\"background:#fefefe\">月</span><span lang=\"EN-US\" style=\"background:#fefefe\" xml:lang=\"EN-US\">7</span><span style=\"background:#fefefe\">日</span></span></span></p>",
+      "region": "学校办公室",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778852584,
+      "star": 309,
+      "view": 480,
+      "id": 7,
+      "publishTime": 1615778917074
+    },
+    {
+      "title": "学校办公室关于2022年夏季学期和暑假时间安排及有关要求的通知",
+      "categoryId": 6,
+      "content": "<p style=\"margin-top: 16px; margin-bottom: 16px; text-align:justify\"><span style=\"word-break:break-all\">各学院、学部，各部、处、直属单位：</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">根据学校统一安排，现将2022年夏季学期和暑假时间安排及有关要求通知如下。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">1.夏季学期和暑假时间为6月20日（星期一）至8月21日（星期日），共9周。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">2.学生离校时间由各学院、学部根据教学计划和学生暑期社会实践工作等合理安排；在校生8月20日（星期六）、8月21日（星期日）到校注册；8月22日（星期一）正式上课。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">3.各职能部门、学院、学部行政部门教职工在保证工作正常运行的前提下，合理安排轮休，从事一线教学和科研的教师，放假时间由各单位自行安排。8月20日（星期六）、8月21日（星期日）全体教职工正式上班，8月22日（星期一）秋季学期开学。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">4.夏季学期和暑假期间各职能部门、学院、学部安排部分工作人员在岗工作，保证各项业务能够正常办理；师生服务中心正常运行；工作时间为社会工作日上午8: 00-11: 30，下午13: 30-17: 00。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">5.6月20日（星期一）至7月8日（星期五）学校领导、各单位主要负责人、副处级以上领导人员正常上班。7月11日（星期一）至8月19日（星期五）各单位需安排领导人员社会工作日在哈带班，并保持手机畅通。带班领导人员要清楚本单位工作状态，统筹协调本单位重要事项处理。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">6.校内按企业方式运转的单位根据上级要求和本单位实际情况安排假期，学校不做统一规定。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">7.各单位应明确一部座机电话为本单位联系电话，并保证工作时间电话能够随时接通，明确接听电话人员工作要求，确保工作衔接有序。各单位内设机构相关业务工作负责人需协助本单位在岗工作人员及时处理工作事务。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">8.全校各单位要妥善安排好在岗人员，切实加强安全保卫及保密工作，遇到重大突发事件发生，要及时报告并妥善处置。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\"><span style=\"background:white\">请广大师生员工遵守属地和学校的各项疫情防控要求，密切关注国内疫情信息动态，教职工离哈须经基层单位审批，非必要不前往疫情风险地区，并继续做好每日健康信息填报工作；加强居家与旅途中的个人防护，保持戴口罩、勤洗手等良好卫生习惯，注意做好个人和共同居住人员的健康监测；主动接种新冠疫苗，共同筑牢抵御新冠病毒防线。如发现疑似症状，及时向居住社区（村屯）和学校报告，并到定点医疗机构就诊。</span></span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">请各单位将夏季学期和暑假期间在岗工作人员和带班领导人员排班表（见附件）于6月16日（星期四）11: 30前发送至邮箱officehit@hit.edu.cn。</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"> </p>\n<p style=\"text-indent:24.0pt; text-align:justify\"><span style=\"word-break:break-all\">附件：夏季学期和暑假期间在岗工作人员和带班领导人员排班表</span></p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"> </p>\n<p style=\"margin-top:16px; margin-bottom:16px; text-indent:24.0pt; text-align:justify\"> </p>\n<p align=\"right\" style=\"margin-top:16px; margin-right:21px; margin-bottom:16px; text-align:right\"><span style=\"word-break:break-all\">学校办公室</span></p>\n<p align=\"right\" style=\"margin-top:16px; margin-bottom:16px; text-align:right\"><span style=\"word-break:break-all\">2022年6月9日</span></p>",
+      "region": "学校办公室",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1615778891518,
+      "star": 781,
+      "view": 891,
+      "id": 8,
+      "publishTime": 1615778917615
+    },
+    {
+      "title": "【哈工大之春】关于开展茶楼相声社十七周年社庆暨毕业生专场系列演出通知",
+      "categoryId": 1,
+      "content": "<p style=\"text-indent:2em;\">为深入学习宣传贯彻党的二十大精神，坚持以习近平总书记贺信精神为引领，弘扬优秀传统文化，丰富校园文化活动形式，激发校园文化活力，提升校园文化氛围，丰富我校精神文明建设，学校特举办茶楼相声社十七周年社庆暨毕业生专场系列演出，相关通知如下。</p>\n<p style=\"text-indent:2em;\"><strong>一、活动主题</strong></p>\n<p style=\"text-indent:2em;\">哈工大之春</p>\n<p style=\"text-indent:2em;\"><strong>二、活动组织单位</strong></p>\n<p style=\"text-indent:2em;\">主办单位：共青团哈尔滨工业大学委员会</p>\n<p style=\"text-indent:2em;\">承办单位：共青团哈尔滨工业大学建筑学院委员会</p>\n<p style=\"text-indent:2em;\">                 哈尔滨工业大学建筑学院茶楼相声社</p>\n<p style=\"text-indent:2em;\"><strong>三、活动对象</strong></p>\n<p style=\"text-indent:2em;\">哈尔滨工业大学全体学生</p>\n<p style=\"text-indent:2em;\"><strong>四、活动时间及地点</strong></p>\n<p style=\"text-indent:2em;\">一校区活动中心214：</p>\n<p style=\"text-indent:2em;\">2023年5月11日至5月13日18:00-21:00</p>\n<p style=\"text-indent:2em;\">二校区文体中心330：</p>\n<p style=\"text-indent:2em;\">2023年5月19日至5月20日18:00-21:00</p>\n<p style=\"text-indent:2em;\">一校区活动中心214：</p>\n<p style=\"text-indent:2em;\">2023年6月1日至6月3日18:00-21:00</p>\n<p style=\"text-indent:2em;\"><strong>五、活动内容</strong></p>\n<p style=\"text-indent:2em;\">（一）一校区活动中心社团十七周年社庆专场演出</p>\n<p style=\"text-indent:2em;\">2023年5月11日</p>\n<p style=\"text-indent:2em;\">今天桌子外面这几位都是硕博研究生专场；</p>\n<p style=\"text-indent:2em;\">2023年5月12日</p>\n<p style=\"text-indent:2em;\">感谢建筑学院大力支持本次系列演出专场；</p>\n<p style=\"text-indent:2em;\">2023年5月13日</p>\n<p style=\"text-indent:2em;\"> 提醒大家明天是母亲节不要忘记世上只有妈妈好专场。</p>\n<p style=\"text-indent:2em;\">（二）二校区文体中心社团十七周年社庆专场演出</p>\n<p style=\"text-indent:2em;\">2023年5月19日 相由新生专场；</p>\n<p style=\"text-indent:2em;\">2023年5月20日 吉相如意专场。</p>\n<p style=\"text-indent:2em;\">（三）一校区活动中心社团毕业成员专场演出</p>\n<p style=\"text-indent:2em;\">2023年6月1日 头一天演专场；</p>\n<p style=\"text-indent:2em;\">2023年6月2日 行云流水专场；</p>\n<p style=\"text-indent:2em;\">2023年6月3日 声嘶力竭专场。</p>\n<p style=\"text-indent:2em;\"><strong>六、参与方式</strong></p>\n<p style=\"text-indent:2em;\">根据演出时间地点到一校区活动中心或二校区文体中心参观相声系列节目演出，可扫码加入相声社官方qq群获取演出时间地点最新通知。</p>\n<p style=\"text-indent:2em;\">一身大褂领正襟平，说学逗唱笑语声声，竹板一响，满台清风，弦鼓三弄，月上柳梢明，弘扬传统文化，传承相声艺术，茶楼相声社期待您的到来！</p>\n<p style=\"text-indent:2em;\"> </p>\n<p class=\"text-align-right\" style=\"text-indent:2em;\">共青团哈尔滨工业大学委员会</p>\n<p class=\"text-align-right\" style=\"text-indent:2em;\">共青团哈尔滨工业大学建筑学院委员会</p>\n<p class=\"text-align-right\" style=\"text-indent:2em;\">2023年5月8日</p>",
+      "region": "建筑学院",
+      "author": "周宏理",
+      "roleId": 3,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1617508814604,
+      "star": 0,
+      "view": 1,
+      "id": 11,
+      "publishTime": 1617523734431
+    },
+    {
+      "title": "建筑学院茶楼相声社2023年开箱演出圆满结束",
+      "categoryId": 2,
+      "content": "<p>       为深入学习宣传贯彻党的二十大精神，进一步弘扬中华优秀传统文化，提升广大同学对优秀传统文化的热爱，丰富校园文化生活，促进校园文化繁荣，由校团委主办，建筑学院团委承办，建筑学院茶楼相声社2023年开箱演出于3月25日在一区活动中心227举办。<br />18点，演出正式开始。第一个节目是由王颂、王宇轩带来的对口相声《对春联》，巧借春联来弘扬传统文化。向观众们普及了对春联的规矩及技巧，用幽默有趣的示例向观众们说明了对春联的一些错误示范，使人印象深刻，两位演员用一年的时间打磨节目，可谓是非常精彩！<br />第二个节目是由张大蔚、刘泽带来的对口相声《报菜名》，演员在台上表演节奏稳定，吐字清晰，将传统贯口演绎的极为精彩。整段相声轻松明快，让人听完全身通透，心旷神怡。<br />第三个节目是由赵欣玲、纪辰松带来的对口相声《口吐莲花》，展示了所谓“传统戏法”“口吐莲花”的表演方式，其中插科打诨，包袱不断，演员的刻苦练习，呈现出了绝佳的舞台效果，很好地调动了现场观众情绪，演绎了一出观众们喜闻乐见的优秀作品。<br />第四个节目是由白昊鹏、何旻樽带来的对口相声《论梦》，讲述的是一个自封“二手”科学家的故事，一个自称研究成果丰硕的科学家，却没有真才实学而洋相百出，这告诉我们这样的自吹自擂是站不住脚跟的。演员在台上的表演生动形象、十分真实，令人拍手叫绝之后细细品味依旧回味无穷！<br />第五个节目是由刘明帆、范政霖带来的对口相声《开粥厂》，讲述了一个自吹自擂，话不着边的人吹嘘自己开粥厂，在三节发放特殊供应的事。演员的表演生动有趣，技艺纯熟，现场观众热情高涨，包袱迭起，笑料不断。<br />最后一个节目是由刘泽、张大蔚、周宏理带来的群口相声《金刚腿》，一人提问，两人回答，名为帮场实为捣乱，在三人的合作下，一问一答间乐趣无穷。作为一个群口相声，十分考验演员之间的配合能力，但演员们经过了长久的磨合，配合十分默契，台下掌声雷动、叫好不断。<br />本次演出吸引了许多同学前来观看，让同学们近距离接触了相声这一传统艺术的独特魅力，向同学们弘扬了优秀传统文化。今后，茶楼相声社将更加努力排练新的作品，在已有基础上深入钻研，不断做到推陈出新，将传统与时代更好地结合在一起，为同学们带来更多更优秀的作品。</p>",
+      "region": "建筑学院",
+      "author": "周宏理",
+      "roleId": 3,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1617508821840,
+      "star": 0,
+      "view": 0,
+      "id": 12,
+      "publishTime": 1617527476474
+    },
+    {
+      "title": "【传承•建院人】建筑学院茶楼相声社2022年迎新专场演出圆满结束",
+      "categoryId": 3,
+      "content": "<p style=\"text-indent: 28.0000pt; text-align:justify\"><font face=\"宋体\">为弘扬优秀传统文化，丰富校园文化生活，</font><font face=\"宋体\">同时</font><font face=\"宋体\">为给广大师生带来更好的、发展中的相声，带来更多的欢笑，</font><font face=\"宋体\">由校团委主办，建筑学院团委承办，建筑学院茶楼相声社</font><font face=\"宋体\">2022年迎新专场演出于9月24日在二区文体中心330举办。</font><font face=\"宋体\">茶楼相声社的全体成员积极参与、精心准备，演出取得了圆满成功。</font></p>\n<p style=\"text-indent:28.0000pt; text-align:justify\"><font face=\"宋体\">18点30分，演出正式开始。</font><font face=\"宋体\">第一个节目是由高鑫雨、周宏理带来的对口相声《铃铛谱》，讲述了一个人胡乱科普各种铃铛的名称和用处。严谨的科普形式和自诩了解铃铛的自大形成鲜明对比。一共介绍八种铃铛，虽为老物件，但是加入大家熟知的建筑、街道等，既有创新，又让观众容易理解。两位演员用一年的时间打磨节目，可谓是非常精彩！</font></p>\n<p style=\"text-indent:28.0000pt; text-align:justify\"><font face=\"宋体\">第二个节目是由周佳、郭俊豪带来的对口相声《逃婚记》，讲述了</font><font face=\"宋体\">“村花”逃婚的故事。使用方言和合适的妆造贴合角色，令人捧腹大笑。整段相声轻松明快，笑料不断。</font></p>\n<p style=\"text-indent:28.0000pt; text-align:justify\"><font face=\"宋体\">第三个节目是由李霜、王颂带来的对口相声《五红图》，讲述了一个人自诩大科学家教另一个人在各种东西上找阴阳五行的故事。逗哏演员通过演绎角色自大却无真才实学来制造笑料，捧哏演员通过咄咄相逼企图让对方</font><font face=\"宋体\">“出丑”来引人发笑，让大家回味无穷。</font></p>\n<p style=\"text-indent:28.0000pt; text-align:justify\"><font face=\"宋体\">第四个节目是由赵欣玲、纪辰松带来的对口相声《值班医生》，讲的是一个</font><font face=\"宋体\">“不靠谱”的值班医生不给人好好看病的故事。其中创新融入学校生活中的场景，令人拍手叫绝之后细细品味依旧回味无穷！</font></p>\n<p style=\"text-indent:28.0000pt; text-align:justify\"><font face=\"宋体\">第五个节目是由刘泽、张大蔚带来的对口相声《黄鹤楼》，讲述了一个自诩的京剧艺术家被要求表演时屡屡露怯、漏洞百出的过程。演员功底深厚，对京剧的了解和演绎都十分出彩。现场观众热情高涨，包袱迭起，笑料不断。</font></p>\n<p style=\"text-indent:28.0000pt; text-align:justify\"><font face=\"宋体\">最后一个节目是由郭俊豪、刘明帆、周宏理、段嘉乐带来的群口相声《红花绿叶》，讲述的是两位老演员给两位新演员</font><font face=\"宋体\">“传授”相声知识和表演技巧，进而引发捧逗矛盾，争当“红花”，最后“大打出手”的故事，并与“语言节目不动手”的解说形成对比，制造笑料。台下掌声雷动、叫好不断，演出也落下帷幕。</font></p>\n<p style=\"text-indent:28.0000pt; text-align:justify\"><font face=\"宋体\">本次茶楼相声社的迎新专场演出活动在弘扬传统相声的同时，也为这个不断进步发展着的社团带来新的文化和生气。这不仅是一次社团的新生力量的吸收，也是传统相声在当代继续焕发生机的有力证明。今后茶楼相声社将会继续为全校师生带来好且新的作品，在继承传统相声艺术的同时，融入新时代元素，努力让传统戏曲艺术焕发出新的光芒。</font></p>",
+      "region": "建筑学院",
+      "author": "周宏理",
+      "roleId": 3,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1617518218962,
+      "star": 0,
+      "view": 0,
+      "id": 14,
+      "publishTime": 1688791089478
+    },
+    {
+      "title": "司马海味-111",
+      "categoryId": 2,
+      "content": "<p>dwda</p>\n",
+      "region": "建筑学院",
+      "author": "司马海味",
+      "roleId": 3,
+      "auditState": 3,
+      "publishState": 0,
+      "createTime": 1617518470380,
+      "star": 0,
+      "view": 0,
+      "id": 15
+    },
+    {
+      "title": "西门11111",
+      "categoryId": 3,
+      "content": "<p>dwadw111</p>\n",
+      "region": "计算学部",
+      "author": "西门吹灯",
+      "roleId": 3,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1617518536111,
+      "star": 0,
+      "view": 0,
+      "id": 16
+    },
+    {
+      "title": "aaaa",
+      "categoryId": 5,
+      "content": "<p>aaaa</p>\n",
+      "region": "学校办公室",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1618035524570,
+      "star": 0,
+      "view": 0,
+      "id": 17,
+      "publishTime": 1618035533728
+    },
+    {
+      "title": "teichui-1111",
+      "categoryId": 4,
+      "content": "<p>111</p>\n",
+      "region": "建筑学院",
+      "author": "铁锤",
+      "roleId": 2,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1618039847910,
+      "star": 0,
+      "view": 2,
+      "id": 18,
+      "publishTime": 1618039853615
+    },
+    {
+      "title": "“2023高教社杯全国大学生数学建模竞赛”报名通知",
+      "categoryId": 5,
+      "content": "<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">        为了培养学生的创新意识及运用数学方法和计算机技术解决实际问题的能力，全国大学生数学建模竞赛组委会决定举办2023高教社杯全国大学生数学建模竞赛（以下简称竞赛），欢迎哈工大学子按照竞赛章程及有关规定进行报名参赛。现将有关事宜通知如下：</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">    1. 2023年竞赛的时间确定为9月7日（周四）18:00时至9月10日（周日）20:00时。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">    2. 参赛者以3名大学生（</span><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\"><strong>必须都来自哈工大本部</strong></span><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">）组成一队参加本科组竞赛。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">3. 请参赛师生在竞赛开始前务必认真阅读和理解《全国大学生数学建模竞赛章程和参赛规则（2019年修订稿）》，严格按照相关要求参赛。违反规则的参赛队将被取消评奖资格，情节严重的参赛队将受到通报批评。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">    4. 从即日起哈工大学生开始报名，参赛队必须认真填写</span><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\"><strong>附件1（信息必须真实）</strong></span><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">，并发送到邮箱mathhit@163.com（邮件主题为：第一个参赛队员姓名+2023国赛）。报名起止时间为：2023年6月6日——25日。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">    5. 参赛队需要现场确认报名</span><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\"><strong>（一名队员即可）</strong></span><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">，</span><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\"><strong>如果未现场确认则报名无效</strong></span><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">确认时间：2023年6月26、27日下午13:30-16:30</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">确认地点：一校区 理学楼 501室</span></p>\n<p style=\"text-align:justify;\">&nbsp;</p>\n<p style=\"text-align:justify;\">&nbsp;</p>\n<p style=\"text-align:left;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">如有问题请联系（直接打电话，不要发短信）：  13134506093，李老师</span></p>\n<p style=\"text-align:left;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">          15045031522，张老师</span></p>\n<p style=\"text-align:justify;\">&nbsp;</p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">哈尔滨工业大学</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">数学学院</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: Microsoft YaHei\", \"Gotham Book\", Arial, Georgia, sans-serif;\">2023年6月6日</span>&nbsp;</p>\n",
+      "region": "数学学院",
+      "author": "诸葛山珍",
+      "roleId": 2,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1688793324025,
+      "star": 0,
+      "view": 0,
+      "id": 19,
+      "publishTime": 1688793342610
+    },
+    {
+      "title": "测试",
+      "categoryId": 1,
+      "content": "<p>测试</p>\n",
+      "region": "建筑学院",
+      "author": "周宏理",
+      "roleId": 3,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1688793324025,
+      "star": 0,
+      "view": 0,
+      "id": 19,
+      "publishTime": 1688793342610
+    },
+    {
+      "title": "test",
+      "categoryId": 3,
+      "content": "<p>哈工大最棒啦！</p>\n",
+      "region": "学校办公室",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1688828193847,
+      "star": 0,
+      "view": 0,
+      "id": 20,
+      "publishTime": 1688828665872
+    }
+  ]
+}

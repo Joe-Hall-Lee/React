@@ -1,0 +1,8 @@
+{
+    "proxy": {
+        "/rest": {
+            "target": "https://portal.huaweicloud.com",
+            "changeOrigin": true
+        }
+    }
+}
